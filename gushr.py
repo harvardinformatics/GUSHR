@@ -140,7 +140,7 @@ if args.GeMoMaJar:
     jar=args.GeMoMaJar
 else:
     this_script_path = os.path.dirname(os.path.realpath(sys.argv[0]))
-    jar = this_script_path + "/GeMoMa-1.6.2.jar"
+    jar = this_script_path + "/GeMoMa-1.7.1.jar"
 
 if not os.path.isfile(jar):
     frameinfo = getframeinfo(currentframe())
@@ -470,7 +470,7 @@ def augustus_gff3_to_gemoma_gff3(aug_gff3_file):
                                     gemoma_handle.write("prediction\t")
                             gemoma_handle.write(
                                 "ID=" + gid + "_R1;ref-gene=NA;AA=NA;" +
-                                "score=NA;tae=NA;tde=NA;tie=NA;" +
+                                "tae=NA;tde=NA;tie=NA;" +
                                 "minSplitReads=0;start=M;stop=*;" +
                                 "evidence=1;Parent=" + gid + "\n")
                         elif(re.search(r'\tCDS\t', line)):
