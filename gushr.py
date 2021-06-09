@@ -272,7 +272,7 @@ def run_simple_process(args_lst):
                 print("Trying to execute the following command:")
                 print(" ".join(args_lst))
             result = subprocess.run(
-                args_lst, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                args_lst, stdout=subprocess.PIPE)
             if args.verbosity > 0:
                 print("Suceeded in executing command.")
             if(result.returncode == 0):
