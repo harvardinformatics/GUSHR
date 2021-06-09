@@ -140,7 +140,7 @@ if args.GeMoMaJar:
     jar=args.GeMoMaJar
 else:
     this_script_path = os.path.dirname(os.path.realpath(sys.argv[0]))
-    jar = this_script_path + "/GeMoMa-1.7.1.jar"
+    jar = this_script_path + "/GeMoMa-1.6.4.jar"
 
 if not os.path.isfile(jar):
     frameinfo = getframeinfo(currentframe())
@@ -253,7 +253,7 @@ def write_byteobj(byte_obj, outfile):
 
 
 def run_simple_process(args_lst):
-    max_attempts = 4
+    max_attempts = 1
     attempts = 0
     while attempts < max_attempts:
         try:
