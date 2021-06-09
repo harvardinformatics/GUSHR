@@ -133,17 +133,6 @@ if java is None:
     print('Please install java version 1.8.')
     quit(1)
 
-''' Check java version for GeMoMa '''
-
-jv = os.popen(
-    "java -version 2>&1 | " + grep_tool + " 'version' 2>&1 | " +
-    "awk -F\\\" '{ split($2,a,\".\"); print a[1]\".\"a[2]}'").read()
-if not jv == "1.8\n":
-    frameinfo = getframeinfo(currentframe())
-    print('Warning in file ' + frameinfo.filename + ' at line ' +
-          str(frameinfo.lineno) + ': java version on your system is ' +
-          jv + ". This script has only been tested with java version 1.8.")
-
 ''' Check whether custom GeMoMa jar is present '''
 
 jar = None
